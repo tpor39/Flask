@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<style>
+    /* Estilos para la sección de bienvenida y la información de contacto */
+    section {
+        background-color: #f9f9f9;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    section h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    section p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    .contact-info {
+        background-color: #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .contact-info h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+</style>
+
+<section>
+    <div class="container">
+        <h2>Bienvenido a nuestra empresa de Bobinado de Motores</h2>
+        <p>En nuestra empresa, nos enorgullecemos de buscar y ofrecer las mejores soluciones en servicios de bobinado de motores. Nuestro compromiso con la calidad y la eficiencia se refleja en cada proyecto que realizamos.</p>
+        <p>¿Por qué elegirnos? No solo garantizamos resultados excepcionales, sino que también nos comprometemos a ofrecer los precios más competitivos del mercado.</p>
+    </div>
+</section>
+
+<div class="contact-info">
+    <div class="container">
+        <h3>Contacto</h3>
+        <p><strong>Dirección:</strong> Las tres marias 2960, San Miguel, Buenos Aires</p>
+        <p><strong>Teléfono:</strong> +54 11 3521 5902</p>
+    </div>
+</div>
+
+<section id="ubicacion">
+    <div class="container">
+        <h2>Ubicación</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.4032227786327!2d-58.76062116135739!3d-34.563355489388684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc977e561c7cc1%3A0x303312360ff0ffbd!2sBobinados%20sb!5e0!3m2!1ses!2sar!4v1718920938437!5m2!1ses!2sar" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                
+        </div>
+    </div>
+</section>
+
+{% endblock %}

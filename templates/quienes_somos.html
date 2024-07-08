@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Quiénes Somos{% endblock %}
+
+{% block content %}
+<style>
+    /* Estilos para mejorar la disposición de las secciones */
+    section {
+        margin-bottom: 30px; /* Espacio entre secciones */
+    }
+
+    h2 {
+        margin-bottom: 10px; /* Espacio bajo los títulos */
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid responsive */
+        gap: 10px; /* Espacio entre imágenes */
+    }
+
+    .image-grid img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .address {
+        margin-top: 10px; /* Espacio sobre la dirección */
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+
+    /* Estilos para la tabla */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px; /* Espacio sobre la tabla */
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<section id="quienes-somos">
+    <div class="container">
+        <h2>Quiénes Somos</h2>
+        <p>Somos una empresa de ingenieros y electromecanicos dedicada al bobinado de motores, con años de experiencia en el mercado, ofreciendo soluciones eficientes y de calidad para nuestros clientes.</p>
+    </div>
+</section>
+
+<section id="imagenes-motores">
+    <div class="container">
+        <div class="image-grid">
+            <img src="{{ url_for('static', filename='images/imagen1.jpg') }}" alt="Motor 1">
+            <img src="{{ url_for('static', filename='images/imagen2.jpg') }}" alt="Motor 2">
+            <img src="{{ url_for('static', filename='images/imagen3.jpg') }}" alt="Motor 3">
+            <img src="{{ url_for('static', filename='images/imagen4.jpg') }}" alt="Motor 4">
+            <img src="{{ url_for('static', filename='images/imagen5.jpg') }}" alt="Motor 5">
+            <img src="{{ url_for('static', filename='images/imagen6.jpg') }}" alt="Motor 6">
+        </div>
+    </div>
+</section>
+
+<section id="tabla-mantenimiento">
+    <div class="container">
+        <h2>Mantenimiento Predictivo de Bobinado de Motores</h2>
+        <table>
+            <tr>
+                <th>Parámetro de Evaluación</th>
+                <th>Técnica de Monitoreo</th>
+                <th>Objetivo</th>
+                <th>Acción Sugerida</th>
+            </tr>
+            <tr>
+                <td>Temperatura del bobinado</td>
+                <td>Termografía infrarroja</td>
+                <td>Detectar sobrecalentamientos que puedan indicar problemas en el aislamiento.</td>
+                <td>Investigar y reparar si es necesario si se detectan variaciones significativas de temperatura.</td>
+            </tr>
+            <tr>
+                <td>Resistencia del aislamiento</td>
+                <td>Megadohmímetro</td>
+                <td>Evaluar la resistencia del aislamiento para prevenir fallas eléctricas.</td>
+                <td>Tomar acciones correctivas si se observa un deterioro significativo en los valores de resistencia.</td>
+            </tr>
+            <tr>
+                <td>Vibración del motor</td>
+                <td>Análisis de vibración</td>
+                <td>Identificar desalineaciones o desequilibrios en el motor.</td>
+                <td>Ajustar o reparar el motor según las recomendaciones del análisis de vibración.</td>
+            </tr>
+            <tr>
+                <td>Corriente de fase</td>
+                <td>Monitoreo en tiempo real</td>
+                <td>Detectar fluctuaciones anormales en la corriente que puedan indicar problemas mecánicos o eléctricos.</td>
+                <td>Investigar y corregir desviaciones significativas de la corriente de fase.</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+
+<section id="contacto">
+    <div class="container">
+        <h2>Contacto</h2>
+        <div class="address">
+            <p>Dirección: Las tres marias 2960, San Miguel, Buenos Aires</p>
+            <p>Teléfono: 11 3521 5902</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
